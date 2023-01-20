@@ -1,3 +1,5 @@
+using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddMvc();
 builder.Services.AddSwaggerGen(
-    //c => c.SwaggerDoc("v1", new Info { Title = "ContosoAPI", Version = "v1"})
+    c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContosoAPI", Version = "v1"})
 );
 
 var app = builder.Build();
