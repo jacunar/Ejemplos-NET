@@ -21,6 +21,11 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
-        }
-    ]
+        }        
+    ],
+    "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+https://localhost:([0-9]+)",
+        "uriFormat": "https://localhost:%s/swagger"
+    },
 }
