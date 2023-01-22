@@ -1,4 +1,5 @@
 using DesignPatternsAsp.Configuration;
+using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration Configuration = builder.Configuration;
@@ -6,6 +7,12 @@ IConfiguration Configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<MyConfig>(Configuration.GetSection("MyConfig"));
+builder.Services.AddTransient((factory) => { return new LocalEarnFactory(
+               Configuration.GetSection("MyConfig").GetValue<decimal>("LocalPercentage")); });
+builder.Services.AddTransient((factory) => {
+    return new ForeignEarnFactory(
+               Configuration.GetSection("MyConfig").GetValue<decimal>("ForeignPercentage"),
+               Configuration.GetSection("MyConfig").GetValue<decimal>("Extra")); });
 
 var app = builder.Build();
 
