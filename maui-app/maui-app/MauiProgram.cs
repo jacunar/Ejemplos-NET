@@ -10,7 +10,8 @@ public static class MauiProgram {
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddTransient<NotesPage>();
+		builder.Services.AddTransient<NotesPage>()
+			            .AddTransient<TipCalculatorPage>();
 
 		return builder.Build();
 	}
