@@ -12,7 +12,11 @@ public static class MauiProgram {
 
 		builder.Services.AddTransient<NotesPage>()
 			            .AddTransient<TipCalculatorPage>()
-						.AddTransient<TipCalculatorv2>();
+						.AddTransient<TipCalculatorv2>()
+						.AddTransient<PeoplePage>();
+
+		string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+		builder.Services.AddSingleton<PersonRepository>(s => ActivatorUtilities.CreateInstance<PersonRepository>(s, dbPath));
 
 		return builder.Build();
 	}
