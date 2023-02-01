@@ -11,7 +11,8 @@ public static class MauiProgram {
 			});
 
 		builder.Services.AddTransient<NotesPage>()
-			            .AddTransient<TipCalculatorPage>();
+			            .AddTransient<TipCalculatorPage>()
+						.AddTransient<TipCalculatorv2>();
 
 		return builder.Build();
 	}
