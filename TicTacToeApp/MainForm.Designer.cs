@@ -26,6 +26,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarContadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@
             this.x_win_count = new System.Windows.Forms.Label();
             this.draw_count = new System.Windows.Forms.Label();
             this.o_win_count = new System.Windows.Forms.Label();
-            this.reiniciarContadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.nuevoJuegoToolStripMenuItem.Text = "Nuevo Juego";
             this.nuevoJuegoToolStripMenuItem.Click += new System.EventHandler(this.nuevoJuegoToolStripMenuItem_Click);
+            // 
+            // reiniciarContadoresToolStripMenuItem
+            // 
+            this.reiniciarContadoresToolStripMenuItem.Name = "reiniciarContadoresToolStripMenuItem";
+            this.reiniciarContadoresToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.reiniciarContadoresToolStripMenuItem.Text = "Reiniciar contadores";
+            this.reiniciarContadoresToolStripMenuItem.Click += new System.EventHandler(this.reiniciarContadoresToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -266,13 +273,6 @@
             this.o_win_count.TabIndex = 15;
             this.o_win_count.Text = "0";
             // 
-            // reiniciarContadoresToolStripMenuItem
-            // 
-            this.reiniciarContadoresToolStripMenuItem.Name = "reiniciarContadoresToolStripMenuItem";
-            this.reiniciarContadoresToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.reiniciarContadoresToolStripMenuItem.Text = "Reiniciar contadores";
-            this.reiniciarContadoresToolStripMenuItem.Click += new System.EventHandler(this.reiniciarContadoresToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -300,6 +300,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
