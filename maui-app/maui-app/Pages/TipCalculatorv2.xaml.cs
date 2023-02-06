@@ -1,8 +1,8 @@
 namespace maui_app.Pages;
 
-public partial class TipCalculatorPage : ContentPage {
-	public TipCalculatorPage() {
-		InitializeComponent();
+public partial class TipCalculatorv2 : ContentPage {
+    public TipCalculatorv2() {
+        InitializeComponent();
 
         billInput.TextChanged += (s, e) => CalculateTip(false, false);
         roundDown.Clicked += (s, e) => CalculateTip(false, true);

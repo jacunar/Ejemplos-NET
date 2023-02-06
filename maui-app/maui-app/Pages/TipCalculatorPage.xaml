@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="maui_app.Pages.TipCalculatorPage"
-             Title="TipCalculatorPage">
+             Title="Tip Calculator">
     <VerticalStackLayout Padding="40" Spacing="10">
 
         <HorizontalStackLayout Spacing="10">
