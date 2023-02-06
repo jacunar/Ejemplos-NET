@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToeMauiApp.MainPage"
+             Title="Tic Tac Toe">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="BlockTitle">
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextColor" Value="{DynamicResource Black}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid Margin="10" Padding="5,5,5,5"
+                      RowDefinitions="*, *, *" ColumnDefinitions="*, *, *">
+        <Border Stroke="Gray" Grid.Column="0" Grid.Row="0">
+            <Label Style="{StaticResource BlockTitle}" Text="X" />
+        </Border>
+        
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="1" Grid.Row="0" />
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="2" Grid.Row="0" />
+
+        <Border Stroke="Gray" Grid.Column="0" Grid.Row="1">
+            <Label Style="{StaticResource BlockTitle}" Text="X" />
+        </Border>
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="1" Grid.Row="1" />
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="2" Grid.Row="1" />
+
+        <Border Stroke="Gray" Grid.Column="0" Grid.Row="2">
+            <Label Style="{StaticResource BlockTitle}" Text="X" />
+        </Border>
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="1" Grid.Row="2" />
+        <Label Style="{StaticResource BlockTitle}" Text="X" Grid.Column="2" Grid.Row="2" />
+    </Grid>
+</ContentPage>
