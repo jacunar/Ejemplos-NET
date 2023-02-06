@@ -1,12 +1,12 @@
 ﻿namespace maui_app;
 
 public partial class App : Application {
-	public static PersonRepository PersonRepo { get; private set; }
+	//public static PersonRepository PersonRepo { get; private set; }
 
-	public App(PeoplePage page, PersonRepository repo) {
+	public App() {
 		InitializeComponent();
-
-		PersonRepo = repo;
-		MainPage = new NavigationPage(page);
+		
+		//PersonRepo = repo;
+		MainPage = new AppShell();
 	}
 }
