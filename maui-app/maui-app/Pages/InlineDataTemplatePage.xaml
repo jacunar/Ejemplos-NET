@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui_app.Pages.InlineDataTemplatePage"
+             xmlns:local="clr-namespace:maui_app.Models"
+             Title="Inline Data Template">
+    <CollectionView>
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local:PersonViewModel}">
+                <local:PersonViewModel Name="Steve" Age="21" Location="USA" />
+                <local:PersonViewModel Name="John" Age="37" Location="USA" />
+                <local:PersonViewModel Name="Tom" Age="42" Location="UK" />
+                <local:PersonViewModel Name="Lucas" Age="29" Location="Germany" />
+                <local:PersonViewModel Name="Tariq" Age="39" Location="UK" />
+                <local:PersonViewModel Name="Jane" Age="30" Location="USA" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnDefinitions="*, *, *">
+                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                    <Label Grid.Column="1" Text="{Binding Age}" />
+                    <Label Grid.Column="2" Text="{Binding Location}" HorizontalTextAlignment="Start" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
