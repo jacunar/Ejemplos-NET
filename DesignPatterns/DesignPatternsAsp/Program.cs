@@ -22,6 +22,7 @@ builder.Services.AddDbContext<DesignPatternsContext>(options => {
 });
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
