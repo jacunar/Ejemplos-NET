@@ -14,7 +14,7 @@ public partial class DesignPatternsContext : DbContext {
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
         if (!optionsBuilder.IsConfigured) {
-            //optionsBuilder.UseSqlServer("Server=(local);Database=DesignPatterns;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer("Server=localhost;Database=DesignPatterns;Trusted_Connection=True;");
         }
     }
 
@@ -29,10 +29,18 @@ public partial class DesignPatternsContext : DbContext {
             entity.Property(e => e.Style)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Brand)
+                .WithMany(p => p.Beers)
+                .HasForeignKey(d => d.BrandId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Beer_Brand");
         });
 
         modelBuilder.Entity<Brand>(entity => {
             entity.ToTable("Brand");
+
+            entity.Property(e => e.BrandId).HasDefaultValueSql("(newid())");
 
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
