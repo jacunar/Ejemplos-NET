@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatternsAsp", "Design
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{94E2E734-3211-4AB7-AA27-EFFAB6A3C7D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Models", "DesignPatterns.Models\DesignPatterns.Models.csproj", "{2BBD08B5-E862-4CB1-AA65-4D071CA7D2BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Repository", "DesignPatterns.Repository\DesignPatterns.Repository.csproj", "{4AA672AC-1303-46CA-AAF1-F856CEF37173}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{94E2E734-3211-4AB7-AA27-EFFAB6A3C7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E2E734-3211-4AB7-AA27-EFFAB6A3C7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E2E734-3211-4AB7-AA27-EFFAB6A3C7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBD08B5-E862-4CB1-AA65-4D071CA7D2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBD08B5-E862-4CB1-AA65-4D071CA7D2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBD08B5-E862-4CB1-AA65-4D071CA7D2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBD08B5-E862-4CB1-AA65-4D071CA7D2BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA672AC-1303-46CA-AAF1-F856CEF37173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA672AC-1303-46CA-AAF1-F856CEF37173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA672AC-1303-46CA-AAF1-F856CEF37173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA672AC-1303-46CA-AAF1-F856CEF37173}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

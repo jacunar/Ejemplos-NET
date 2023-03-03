@@ -1,4 +1,7 @@
+using DesignPatterns.Models.Data;
+using DesignPatterns.Repository;
 using DesignPatternsAsp.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +16,13 @@ builder.Services.AddTransient((factory) => {
     return new ForeignEarnFactory(
                Configuration.GetSection("MyConfig").GetValue<decimal>("ForeignPercentage"),
                Configuration.GetSection("MyConfig").GetValue<decimal>("Extra")); });
+
+builder.Services.AddDbContext<DesignPatternsContext>(options => {
+    options.UseSqlServer(Configuration.GetConnectionString("Connection"));
+});
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
