@@ -2,9 +2,9 @@
 
 namespace DesignPatterns.Repository; 
 public class UnitOfWork : IUnitOfWork {
-    private DesignPatternsContext _context;
-    private IRepository<Beer> _beers;
-    private IRepository<Brand> _brands;
+    private DesignPatternsContext _context = null!;
+    private IRepository<Beer> _beers = null!;
+    private IRepository<Brand> _brands = null!;
     public IRepository<Beer> Beers {
         get {
             return _beers == null ?
