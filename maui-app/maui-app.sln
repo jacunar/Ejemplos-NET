@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "maui-app", "maui-app\maui-app.csproj", "{089EADB6-BCF1-466A-8AA4-06B0736FB5F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeysApp", "MonkeysApp\MonkeysApp.csproj", "{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,12 @@ Global
 		{089EADB6-BCF1-466A-8AA4-06B0736FB5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{089EADB6-BCF1-466A-8AA4-06B0736FB5F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{089EADB6-BCF1-466A-8AA4-06B0736FB5F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF080D8B-B326-47CF-A5A0-B5F5A76D8D78}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
