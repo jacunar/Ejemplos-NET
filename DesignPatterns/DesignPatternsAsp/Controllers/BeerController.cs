@@ -43,7 +43,7 @@ public class BeerController : Controller {
         beer.Name = beerVM.Name;
         beer.Style = beerVM.Style;
 
-        if(beerVM is null) {
+        if(beerVM.BrandId == null) {
             var brand = new Brand();
             brand.Name = beerVM.OtherBrand;
             brand.BrandId = Guid.NewGuid();

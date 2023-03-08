@@ -3,6 +3,12 @@
 <form asp-controller="Beer" asp-action="Add" method="post">
     <div class="form-group">
         <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Style"></label>
         <input class="form-control" asp-for="Style" />
         <span asp-validation-for="Style" class="text-danger"></span>
     </div>
