@@ -32,25 +32,25 @@ public class BeerController : Controller {
     }
 
     [HttpPost]
-    public IActionResult Add(FormBeerViewModel formBeerViewModel) {
+    public IActionResult Add(FormBeerViewModel beerVM) {
         if (!ModelState.IsValid) {
             var brands = _unitOfWork.Brands.Get();
             ViewBag.Brands = new SelectList(brands, "BrandId", "Name");
-            return View("Add", formBeerViewModel);
+            return View("Add", beerVM);
         }
 
         var beer = new Beer();
-        beer.Name = formBeerViewModel.Name;
-        beer.Style = formBeerViewModel.Style;
+        beer.Name = beerVM.Name;
+        beer.Style = beerVM.Style;
 
-        if(formBeerViewModel is null) {
+        if(beerVM is null) {
             var brand = new Brand();
-            brand.Name = formBeerViewModel.OtherBrand;
+            brand.Name = beerVM.OtherBrand;
             brand.BrandId = Guid.NewGuid();
             beer.BrandId = brand.BrandId;
             _unitOfWork.Brands.Add(brand);
         } else {
-            beer.BrandId = (Guid)formBeerViewModel.BrandId;
+            beer.BrandId = (Guid)beerVM.BrandId;
         }
 
         _unitOfWork.Beers.Add(beer);
@@ -59,5 +59,3 @@ public class BeerController : Controller {
         return RedirectToAction("Index");
     }
 }
-
-// Quedamos en el minuto 10 de la clase 17. Guardando el 2 tablas
